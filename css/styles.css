@@ -1,4 +1,4 @@
-#container,#container2,#container3{
+#container,#container2,#container3,#container4,#container5{
 	width: inherit;
 	padding: 0;
 	background-color: #ccc;
@@ -13,7 +13,7 @@ h1{
 #article{
 	padding: 10px;
 }
-#eventButton,#databtn, #square,#cprototype{
+#eventButton,#databtn, #square,#cprototype,#promisebtn ,#hoverbtn{
 	background-color:#32335d;
 	padding: 10px;
 	margin: 5px;

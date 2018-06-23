@@ -13,7 +13,7 @@
 		</p>
 		<small>Want to Change this Paragaph`s background and text Color!</small><br><br>
 		<button id="eventButton" onclick="ChangeColor()">Click on this button</button>
-		<hr>
+	<hr>
 		<div>
 			<h2>Fill in the following!(objects demo)</h2>
 			<br>
@@ -23,8 +23,6 @@
 			<input type="text" id="age" placeholder="Age"><br><br>
 			<small>Country</small>
 			<input type="text" id="country" placeholder="Country"><br><br>
-
-
 			<button id="databtn" onclick="FetchData()">Fetch Data</button><br>
 			<p id="output"></p>
       
@@ -34,11 +32,11 @@
 	</div>
 	<hr>
 	<div id="container2">
-				<h1>Closure demo</h1>
-				<small>Enter any number</small>
-				<input type="number" id="number">
-				<button id="square" onclick="square()">Click to see the result</button>
-				<p id="psquare"></p>		
+			<h1>Closure demo</h1>
+			<small>Enter any number</small>
+			<input type="number" id="number">
+			<button id="square" onclick="square()">Click to see the result</button>
+			<p id="psquare"></p>		
 	</div>
 	<hr>
 	<div id=container3>
@@ -48,13 +46,27 @@
 			<input type="text" name="name" id="sname"><br>
 			<small>student Id</small>
 			<input type="text" name="id" id="sid">
-			<button id="cprototype" onclick="cprototype()"> click here to generate your score</button>
-
-
-				
+			<button id="cprototype" onclick="cprototype()"> click here to generate your score</button>	
 			<p id="output1"></p>
 	</div>
+	<div id="container4">
+		<h1>custom events demo</h1>
+		<form>
+  			<textarea></textarea>
+		</form>
+		<p>Whatever is typed in the above text-box is being console logged though a custom event. How awesome!</p>
+	
+			</div>
+	<div id="container4">
+		<h1>Javascript Promises demo</h1>
 
+	<button id="promisebtn" onclick="promises()">click me  and console.log to witness the magic of events we see how it goes</button>
+	</div>
+	<div id="container6">
+	<button id="hoverbtn" onmouseover="showText()" onmouseout="clearText()"> Hover the mouse over here</button>
+	<p id="hovermesage"></p>
+		
+	</div><br><br><br><br>
 	<script src="js/main.js"></script>
 </body>
 </html>

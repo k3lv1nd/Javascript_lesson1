@@ -102,5 +102,65 @@ var message=student.showNameIdandScore();
 document.getElementById('output1').innerHTML= message;
 
 }
+//........................................................................................
+
+//custom events
+const form = document.querySelector('form');
+const textarea = document.querySelector('textarea');
+
+form.addEventListener('awesome', e => console.log(e.detail.text()));
+
+textarea.addEventListener('input', function() {
+  
+  this.dispatchEvent(new CustomEvent('awesome', { bubbles: true, detail: { text: () => textarea.value } }))
+});
+//...........................................................................................................
+// Javascript promises
+function promises(){
+	const promise = new Promise((resolve, reject) => {
+  const request = new XMLHttpRequest();
+
+  request.open('GET', 'https://api.icndb.com/jokes/random');
+  request.onload = () => {
+    if (request.status === 200) {
+      resolve(request.response); 
+    } else {
+      reject(Error(request.statusText)); 
+    }
+  };
+
+  request.onerror = () => {
+    reject(Error('Error fetching data.')); 
+  };
+
+  request.send(); 
+});
+
+console.log('Asynchronous request made.');
+
+promise.then((data) => {
+  console.log('Got data! Promise fulfilled.');
+  document.body.textContent = JSON.parse(data).value.joke;
+}, (error) => {
+  console.log('Promise rejected.');
+  console.log(error.message);
+});
+}
+//................................................................................................................
+//Inbuilt events
+function changetext (){
+	var message='Mouse over the button';
+	document.getElementById('hovermesage').innerHTML=message;
+}
+
+function showText(){
+	var message='Mouse over the button';
+	document.getElementById('hovermesage').innerHTML=message;
+}
+function clearText(){
+	document.getElementById('hovermesage').innerHTML=' ';
+}
+
+
 
 
